@@ -3,6 +3,7 @@ package com.deuxlapins.todosqlite.view;
 import android.content.Context;
 import android.graphics.Paint;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,7 @@ import java.util.List;
  * Created by chetan on 06/01/17.
  */
 
-public class ToDoListAdapter extends ArrayAdapter<ToDo> {
+public class ToDoListAdapter extends ArrayAdapter<Object> {
 
     private List<ToDo> items;
     private List<Object> allItems;
@@ -63,7 +64,7 @@ public class ToDoListAdapter extends ArrayAdapter<ToDo> {
 
     @Override
     public int getItemViewType(int position) {
-        Object item = allItems.get(position);
+        Object item = getItem(position);
 
         if (item instanceof ToDoItem) {
             return 1;
@@ -72,12 +73,24 @@ public class ToDoListAdapter extends ArrayAdapter<ToDo> {
         }
     }
 
+    @Nullable
+    @Override
+    public Object getItem(int position) {
+        Object item = allItems.get(position);
+        return  item;
+    }
+
+    @Override
+    public boolean isEnabled(int position) {
+        return getItemViewType(position) == 1;
+    }
+
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view;
 
-        Object item = allItems.get(position);
+        Object item = getItem(position);
 
         if (item instanceof ToDoItem) {
             ToDoItem toDoItem = (ToDoItem) item;

@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">ToDoSQLite</string>
+    <string name="app_name">To Do</string>
+    <string name="title_activity_add_task">Add To Do</string>
+    <string name="add_todo_what">What do you want to do?</string>
+    <string name="add_todo_what_hint">Ex: Something awesome!</string>
+
+    <string name="add_todo_when">When do you want to do it?</string>
+    <string name="todo_list_context_memu_title">Choose an action</string>
 </resources>

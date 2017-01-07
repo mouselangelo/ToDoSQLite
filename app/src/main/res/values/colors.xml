@@ -4,8 +4,16 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="themeColor">#45d6a9</color>
+
     <color name="textDarkest">#000000</color>
     <color name="textDark">#333333</color>
     <color name="textLight">#ffffff</color>
     <color name="backgroundDark">#000000</color>
+    <color name="green">#00ff00</color>
+    <color name="darker_green">#00ee00</color>
+
+    <color name="gray">#c5c5c5</color>
+    <color name="darker_gray">#b5b5b5</color>
+
 </resources>

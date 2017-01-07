@@ -17,17 +17,18 @@ import java.util.Map;
  * Created by chetan on 06/01/17.
  */
 
-public class ToDoModelImpl implements ToDoModel {
+class ToDoModelImpl implements ToDoModel {
 
+    private List<ToDoItem> items = getDummyItems();// new ArrayList<>();
 
     @Override
     public List<ToDo> getItems() {
-        return groupToDos(getDummyItems());
+        return groupToDos(items);
     }
 
     @Override
     public void add(ToDoItem item) {
-
+        items.add(item);
     }
 
     @Override
@@ -69,6 +70,7 @@ public class ToDoModelImpl implements ToDoModel {
 
         return toDos;
     }
+
 
 
     private static List<ToDoItem> dummies;
@@ -119,5 +121,6 @@ public class ToDoModelImpl implements ToDoModel {
     private static boolean generateRandomDoneStatus() {
         return Math.random() < 0.5;
     }
+
 
 }

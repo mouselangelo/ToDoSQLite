@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="todolist_context_menu_options">
+        <item>Edit</item>
+        <item>Delete</item>
+    </array>
+
+</resources>
